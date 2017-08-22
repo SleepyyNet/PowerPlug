@@ -1,0 +1,22 @@
+{
+  "name": "powerplug",
+  "version": "1.0.0",
+  "description": "The JS version of  PowerPlug - a cool multipurpose Discord bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codefromcirc/powerplugjs.git"
+  },
+  "author": "CircuitRCAY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codefromcirc/powerplugjs/issues"
+  },
+  "homepage": "https://github.com/codefromcirc/powerplugjs#readme",
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  }
+}
