@@ -1,3 +1,3 @@
 @echo off
 title PowerPlugJS launcher
-node .
+nodemon bot.js

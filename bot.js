@@ -8,7 +8,8 @@ bot.on("ready", async () => {
     console.log(`PowerPlug is plugged in! Username: ${bot.user.username}`);
     try {
         let link = await bot.generateInvite(["ADMINISTRATOR"]);
-        console.log("Prefix: " + link);
+        console.log("Invite: " + link);
+        console.log("Prefix: " + prefix)
     } catch(e) {
         console.log(e.stack);
     }
@@ -31,14 +32,32 @@ bot.on("message", async message => {
             .setColor("#ff0000")
             .addField("Full Username", `${message.author.username}#${message.author.discriminator}`)
             .addField("User ID", message.author.id)
-            .addField("Account created at", message.author.createdAt);
+            .addField("Account created at", message.author.createdAt)
+            .image(message.author.icon);
+ 
 
 
     message.channel.sendEmbed(embed);  
 
-    return;  
+    if(command === `${prefix}servinfo`) {
+        let embed = new Discord.RichEmbed()
+        .setAuthor(message.author.username)
+        .setDescription("This server's info")
+        .setColor("#ff0000")
+        .addField("Server Name", message.guild.name)
+        .addField("Server ID", message.guild.id)
+        .addField("Amount of members", message.guild.memberCount)
+        .addField("Server Region", message.guild.region)
+        .addField("Roles", message.guild.roles)
+        .image(message.guild.icon);
+
+    message.channel.sendEmbed(embed);    
 
     }
+
+    return; 
+} 
+
 });
 
 bot.login(settings.token)
