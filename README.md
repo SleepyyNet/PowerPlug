@@ -1,5 +1,6 @@
+<img src="https://cdn.discordapp.com/attachments/350173567675006977/350173647081570324/Unbenannt1.png">
 # PowerPlugJS
-<img align="right" src="https://cdn.discordapp.com/attachments/350173567675006977/350173647081570324/Unbenannt1.png" height="200" width="200">
+
 The JavaScript version of PowerPlug - a Discord bot that charges up Discord (in a good way)
 
 ## Self-Hosted Install Instructions
