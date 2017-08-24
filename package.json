@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/codefromcirc/powerplugjs#readme",
   "dependencies": {
-    "discord.js": "^11.1.0"
+    "discord.js": "^11.1.0",
+    "feedparser": "^2.2.1"
   }
 }
