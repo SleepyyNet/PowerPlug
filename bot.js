@@ -28,6 +28,7 @@ bot.commands = new Discord.Collection();
 
 bot.on("ready", async () => {
     console.log(`PowerPlug is plugged in! Username: ${bot.user.username}`);
+    bot.user.setAvatar("https://cdn.discordapp.com/attachments/350173567675006977/350173647081570324/Unbenannt1.png");
     try {
         let link = await bot.generateInvite(["ADMINISTRATOR"]);
         let github = "https://github.com/codefromcirc/powerplugjs";

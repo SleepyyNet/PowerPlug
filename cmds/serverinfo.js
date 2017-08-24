@@ -5,8 +5,7 @@ module.exports.run = async (bot, message, args) => {
             .setColor("#ff0000")
             .addField("Guild name", message.guild.name)
             .addField("Guild ID", message.guild.id)
-            .addField("Guild created at", message.guild.createdAt)
-            .addField("Roles", message.guild.roles);
+            .addField("Guild created at", message.guild.createdAt);
             
        message.channel.send({servembed});     
 }
