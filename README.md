@@ -33,5 +33,8 @@ Open settings.json with a text editor and copy the bot token from Step 4 and pas
 Run the bot:
 `node bot.js`
 
+## Suggestions 
+Either talk to me directly (CircuitRCAY#6187) or join the [official PowerPlug server](https://discord.gg/DWff7sP) and head to the #suggestions channel and tell me what you want! 
+
 ## License
 Coming soon...
