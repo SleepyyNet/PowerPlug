@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
         setTimeout(function() {
             member.kick();
             message.delete()
-        }, delayMillis);
+        });
 }
 
 module.exports.help  = {
