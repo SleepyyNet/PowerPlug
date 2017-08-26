@@ -55,8 +55,9 @@ bot.on("message", async message => {
    let cmd = bot.commands.get(command.slice(prefix.length));
    if(cmd) cmd.run(bot, message, args);
 
-
-
 });
+
+
+
 
 bot.login(settings.token)

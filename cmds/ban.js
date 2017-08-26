@@ -1,20 +1,31 @@
+const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
-    if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
-      return message.reply("Sorry, you don't have permissions to use this!");
-    
-    let member = message.mentions.members.first();
-    if(!member)
-      return message.reply("Please mention a valid member of this server");
-    if(!member.bannable) 
-      return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
+        if(!message.member.roles.some(r=>["Administrator", "Moderator", "Admin", "Mod"].includes(r.name)) ) return;
 
-    let reason = args.slice(1).join(' ');
-    if(!reason)
-      return message.reply("Please indicate a reason for the ban!");
-    
-    await member.ban(reason)
-        .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
-    message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
+        if (message.mentions.users.size === 0) {
+            return message.author.send("Correct Ussage: `ban (user) (reason)`")
+        }
+
+        let array = message.content.split(" ").slice(1);
+        let mentioned = array[0];
+        let reason = array.slice(1).join(" ")
+        let member = message.mentions.members.first();
+        const channel = message.guild.channels.find("name", "mod-log")
+        
+
+        if (!reason) {
+            return message.author.send("Correct Ussage: `ban (user) (reason)`")
+        }
+        const embed = new Discord.RichEmbed()
+        .setDescription("**User Banned**\n**User**: " + member + "\n**Banned By: **" + message.author + "\n**Reason**: " + reason)
+        message.channel.send({ embed })
+        message.guild.channels.find("name", "mod-log").send({ embed })
+        member.send({ embed })
+
+        setTimeout(function() {
+            member.ban();
+            message.delete()
+        }, delayMillis);
 }
 
 module.exports.help = {
