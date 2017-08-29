@@ -8,7 +8,9 @@ message.channel.send("Check your private messages, " + message.author.username)
         .addField("`pp2!serverinfo`", "Shows server info")
         .addField("`pp2!ping`", "Shows the websocket ping for Discord")
         .addField("`pp2!say`", "Repeats what you say")
-        .addField("These are the commands so far, join my server (https://discord.gg/qz4jxzb) to keep updated.", "Invite: https://bit.ly/PowerPlug");
+        .addField("`pp2!engt`", "A feed of news from https://engadget.com/")
+        .addField("`pp2!dank`", "A feed from /r/dankmemes")
+        .addField("These are the commands so far, join my server (https://discord.gg/DWff7sP) to keep updated.", "Invite: https://bit.ly/PowerPlug");
 
 
 message.author.send({embed: embed});
