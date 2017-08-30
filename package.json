@@ -11,13 +11,25 @@
     "url": "git+https://github.com/codefromcirc/powerplugjs.git"
   },
   "author": "CircuitRCAY",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/codefromcirc/powerplugjs/issues"
   },
   "homepage": "https://github.com/codefromcirc/powerplugjs#readme",
   "dependencies": {
     "discord.js": "^11.1.0",
-    "feedparser": "^2.2.1"
-  }
+    "feedparser": "^2.2.1",
+    "request": "^2.81.0",
+    "urban": "^0.3.1",
+    "ytdl-core": "^0.17.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "discord",
+    "bot",
+    "moderation",
+    "memes",
+    "news",
+    "rss"
+  ]
 }

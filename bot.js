@@ -10,13 +10,14 @@ bot.commands = new Discord.Collection();
     fs.readdir("./cmds/", (err, files) => {
     if(err) console.error(err);
 
+
     let jsfiles = files.filter(f => f.split(".").pop() === "js");
     if(jsfiles.length <= 0) {
         console.log("No commands to load");
         return;
     }
 
-    console.log (`Loading ${jsfiles.length} commands!`)
+    console.log(`${jsfiles.length} main commands to load.`)
 
     jsfiles.forEach((f, i) => {
         let props = require(`./cmds/${f}`);
@@ -55,9 +56,7 @@ bot.on("message", async message => {
    let cmd = bot.commands.get(command.slice(prefix.length));
    if(cmd) cmd.run(bot, message, args);
 
+    });
 });
-
-
-
 
 bot.login(settings.token)

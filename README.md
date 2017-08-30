@@ -36,5 +36,19 @@ Run the bot:
 ## Suggestions 
 Either talk to me directly (CircuitRCAY#6187) or join the [official PowerPlug server](https://discord.gg/DWff7sP) and head to the #suggestions channel and tell me what you want! 
 
+## Contributions
+Feel free to send me a pull request! All devs need some help somehow! Just run these commands to get you started:
+
+```
+# Clone the project
+git clone git://github.com/codefromcirc/powerplugjs
+
+# Install dependencies
+npm install
+
+# Run the bot
+npm start
+``` 
+
 ## License
-Coming soon...
+The license is the MIT license. Review the license [here](https://github.com/codefromcirc/powerplugjs/blob/master/LICENSE.md)
