@@ -8,7 +8,7 @@ The JavaScript version of PowerPlug - a Discord bot that charges up Discord (in 
 
 ### Prerequisites
 
-* NodeJS
+* NodeJS V8
 * A terminal
 * Git
 
@@ -32,6 +32,9 @@ Open settings.json with a text editor and copy the bot token from Step 4 and pas
 ### Step 5
 Run the bot:
 `node bot.js`
+
+## Or the easy way...
+Go to Step 1 and run **start.bat/start.sh** respective to your system
 
 ## Suggestions 
 Either talk to me directly (CircuitRCAY#6187) or join the [official PowerPlug server](https://discord.gg/DWff7sP) and head to the #suggestions channel and tell me what you want! 
