@@ -24,6 +24,24 @@ bot.commands = new Discord.Collection();
         console.log(`${i + 1}: ${f} loaded!`)
         bot.commands.set(props.help.name, props);
     });
+    
+    fs.readdir("./levels/", (err, files) => {
+    if(err) console.error(err);
+
+
+    let jsfiles = files.filter(f => f.split(".").pop() === "js");
+    if(jsfiles.length <= 0) {
+        console.log("No commands to load");
+        return;
+    }
+
+    console.log(`${jsfiles.length} main commands to load.`)
+
+    jsfiles.forEach((f, i) => {
+        let props = require(`./levels/${f}`);
+        console.log(`${i + 1}: ${f} loaded!`)
+        bot.commands.set(props.help.name, props);
+    });
 });
 
 
