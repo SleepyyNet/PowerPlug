@@ -2,9 +2,9 @@ module.exports.run = async (bot, message, args) => {
 var FeedParser = require('feedparser');
     var feedparser = new FeedParser();
     var request = require('request');
-    request('https://reddit.com/r/dankmemes/.rss').pipe(feedparser);
+    request('http://www.engadget.com/rss.xml').pipe(feedparser);
     feedparser.on('error', function(error){
-        message.channel.sendMessage("failed reading feed: " + error);
+        message.channel.send("failed reading feed: " + error);
     });
     var shown = 0;
     feedparser.on('readable',function() {
@@ -15,18 +15,19 @@ var FeedParser = require('feedparser');
             return;
         }
         var item = stream.read();
-        message.channel.sendMessage(item.title + " - " + item.link, function() {
+        message.channel.send(item.title + " - " + item.link, function() {
             if(full === true){
                 var text = htmlToText.fromString(item.description,{
                     wordwrap:false,
                     ignoreHref:true
                 });
-                message.channel.sendMessage(text);
+                message.channel.send(text);
             }
         });
         stream.alreadyRead = true;
 });
 }
+
 module.exports.help = {
-    name: "dank"
+    name: "engt"
 }
