@@ -8,12 +8,6 @@ function clean(text) {
       return text;
 }
 
-if(message.author.id !== settings.ownerid) return;
-        const msg = message;
-        const mesg = message;
-        const client = new Discord.Client()
-        const lastResult = this.lastResult;
-        
     
     try {
       const code = args.join(" ");

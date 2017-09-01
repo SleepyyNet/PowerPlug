@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
-        let points = JSON.parse(fs.readFileSync("../levels/points.json", "utf8"));
+        let points = JSON.parse(fs.readFileSync("../powerplugjs/levels/points.json", "utf8"));
         if (!points[message.author.id]) points[message.author.id] = {
                 points: 0,
                 level: 0
