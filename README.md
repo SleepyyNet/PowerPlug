@@ -8,7 +8,7 @@ The JavaScript version of PowerPlug - a Discord bot that charges up Discord (in 
 
 ### Prerequisites
 
-* NodeJS V8
+* NodeJS v8
 * A terminal
 * Git
 
@@ -52,6 +52,12 @@ npm install
 # Run the bot
 npm start
 ``` 
+
+## Libraries used
+* [discord.js](https://discord.js.org)
+* [snekfetch](https://github.com/devsnek/snekfetch)
+* [urban-dictionary](https://github.com/NightfallAlicorn/urban-dictionary)
+* [feedparser](https://github.com/danmactough/node-feedparser)
 
 ## License
 The license is the MIT license. Review the license [here](https://github.com/codefromcirc/powerplugjs/blob/master/LICENSE.md)
