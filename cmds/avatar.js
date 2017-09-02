@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     let msg = await message.channel.send("Generating...");
-
+    let target = message.mentions.users.first() || message.author;
     await message.channel.send({files: [
         {
-            attachment: message.author.displayAvatarURL,
+            attachment: target.displayAvatarURL,
             name: "avatar.png"
         }
     ]});

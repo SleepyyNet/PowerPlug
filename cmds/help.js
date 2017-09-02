@@ -11,6 +11,7 @@ message.channel.send("Check your private messages, " + message.author.username)
         .addField("`pp2!engt`", "A feed of news from https://engadget.com/")
         .addField("`pp2!ign`", "A feed from https://ign.com")
         .addField("`pp2!suggest`", "Suggests commands for PowerPlugJS")
+        .addField("`pp2!urban`", "Gets a random definition from https://urbandictionary.com")
         .addField("These are the commands so far, join my server (https://discord.gg/DWff7sP) to keep updated.", "Invite: https://bit.ly/PowerPlug");
 
 
