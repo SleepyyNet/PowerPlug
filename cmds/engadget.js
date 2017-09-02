@@ -1,8 +1,8 @@
 module.exports.run = async (bot, message, args) => {
 var FeedParser = require('feedparser');
     var feedparser = new FeedParser();
-    var request = require('request');
-    request('http://www.engadget.com/rss.xml').pipe(feedparser);
+    var snekfetch = require('snekfetch');
+    snekfetch.get('http://www.engadget.com/rss.xml').pipe(feedparser);
     feedparser.on('error', function(error){
         message.channel.send("failed reading feed: " + error);
     });

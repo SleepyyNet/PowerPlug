@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
         var FeedParser = require('feedparser');
         var feedparser = new FeedParser();
         var request = require('request');
-        request('http://feeds.ign.com/ign/all').pipe(feedparser);
+        snekfetch.get('http://feeds.ign.com/ign/all').pipe(feedparser);
         feedparser.on('error', function(error){
             message.channel.send("failed reading feed: " + error);
         });
