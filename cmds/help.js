@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-module.exports.run = async (bot, message, args) => {
+exports.run = async (bot, message, args) => {
 message.channel.send("Check your private messages, " + message.author.username)    
     let embed = new Discord.RichEmbed()
         .addField("`pp2!userinfo`", "Your user info")
@@ -18,8 +18,4 @@ message.channel.send("Check your private messages, " + message.author.username)
 message.author.send({embed: embed});
 
 
-}
-
-module.exports.help = {
-    name: "help"
 }

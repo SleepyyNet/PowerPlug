@@ -1,5 +1,5 @@
 const settings = require('../settings.json')
-module.exports.run = async (bot, message, args) => {
+exports.run = async (bot, message, args) => {
     
         var FeedParser = require('feedparser');
         var feedparser = new FeedParser();
@@ -29,8 +29,4 @@ module.exports.run = async (bot, message, args) => {
             stream.alreadyRead = true;
         
     });
-}
-
-module.exports.help = {
-    name: "ign"
 }

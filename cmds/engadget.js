@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args) => {
+exports.run = async (bot, message, args) => {
 var FeedParser = require('feedparser');
     var feedparser = new FeedParser();
     var snekfetch = require('snekfetch');
@@ -26,8 +26,4 @@ var FeedParser = require('feedparser');
         });
         stream.alreadyRead = true;
 });
-}
-
-module.exports.help = {
-    name: "engt"
 }

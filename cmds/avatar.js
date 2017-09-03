@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args) => {
+exports.run = async (bot, message, args) => {
     let msg = await message.channel.send("Generating...");
     let target = message.mentions.users.first() || message.author;
     await message.channel.send({files: [
@@ -12,7 +12,3 @@ module.exports.run = async (bot, message, args) => {
 
 }
 
-module.exports.help = {
-    name: "avatar" 
-    
-}

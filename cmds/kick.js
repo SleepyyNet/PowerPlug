@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-module.exports.run = async (bot, message, args) => {
+exports.run = async (bot, message, args) => {
     const client = new Discord.Client();
     if(!message.member.roles.some(r=>["Administrator", "Moderator", "Admin", "Mod"].includes(r.name)) ) return;
 
@@ -27,8 +27,4 @@ module.exports.run = async (bot, message, args) => {
             member.kick();
             message.delete()
         });
-}
-
-module.exports.help  = {
-    name: "kick"
 }

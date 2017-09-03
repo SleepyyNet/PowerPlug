@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-module.exports.run = async (bot, message, args) => {
+exports.run = async (bot, message, args) => {
         if(!message.member.roles.some(r=>["Administrator", "Moderator", "Admin", "Mod"].includes(r.name)) ) return;
 
         if (message.mentions.users.size === 0) {
@@ -28,6 +28,3 @@ module.exports.run = async (bot, message, args) => {
         });
 }
 
-module.exports.help = {
-    name: "ban"
-}

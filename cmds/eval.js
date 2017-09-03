@@ -1,6 +1,6 @@
 const settings = require("../settings.json");
 const Discord = require('discord.js');
-module.exports.run = async (bot, message, args) => {
+exports.run = async (bot, message, args) => {
 
     function clean(text) {
       if (typeof(text) === "string")
@@ -22,6 +22,3 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
   }
-module.exports.help = {
-    name: "eval"
-}

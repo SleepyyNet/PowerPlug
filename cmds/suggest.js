@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-module.exports.run = async (bot, message, args) => {
+exports.run = async (bot, message, args) => {
         let suggestion = args.join(" ");
         const channel = bot.channels.get('339926027151081472')
 
@@ -10,8 +10,4 @@ module.exports.run = async (bot, message, args) => {
         .setDescription("**User Suggestion**\n**User**: " + message.author.username + "\n**Suggestion**: " + suggestion)
         message.channel.send({ embed });
         channel.send({ embed });
-}
-
-module.exports.help = {
-    name: "suggest"
 }

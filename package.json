@@ -19,9 +19,9 @@
   "dependencies": {
     "discord.js": "^11.1.0",
     "feedparser": "^2.2.1",
-    "request": "^2.81.0",
-    "urban": "^0.3.1",
-    "ytdl-core": "^0.17.0"
+    "node-accuweather": "^1.7.0",
+    "snekfetch": "^3.2.9",
+    "urban-dictionary": "^1.0.6"
   },
   "devDependencies": {},
   "keywords": [
