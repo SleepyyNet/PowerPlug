@@ -1,6 +1,6 @@
 {
-  "name": "powerplug",
-  "version": "1.0.0",
+  "name": "powerplugjs",
+  "version": "0.0.1",
   "description": "The JS version of  PowerPlug - a cool multipurpose Discord bot",
   "main": "bot.js",
   "scripts": {
