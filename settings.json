@@ -1,5 +1,12 @@
 {
-    "token":"bot-token-here",
+    "token":"MzQ5MTM2MjAzMTM3Njc5MzYw.DI6L7Q.5v8_qGjdQSmhn6QcH9qAoogvWrQ",
     "prefix":"pp2!",
-    "ownerid":"owner-id-here"
+    "ownerid":"255114091360681986",
+    
+    "keys": {
+        "giphy":"2742e1c403124acb85f8abf1e01c41fb",
+        "dbl":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI1NTExNDA5MTM2MDY4MTk4NiIsImlhdCI6MTUwNDY4OTYxNH0.mY0CvpEWxjSgMBxLEQKlGQQ4IBfyFs4zibdSVO1BBgk",
+        "dbots":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIyNTUxMTQwOTEzNjA2ODE5ODYiLCJyYW5kIjo2NTUsImlhdCI6MTUwNDQyNDA0NH0.88mpS18UzdsK6E4Utby5T3PUaly_y_6qpoaiWZvQz6A"
+    }
+    
 }
