@@ -5,6 +5,13 @@ const bot = new Discord.Client();
 
 const prefix = settings.prefix;
 
+const music = require('discord.js-music-v11')
+music(bot, {
+        prefix: 'pp2!',        
+        global: false,      
+        maxQueueSize: 10,   
+        clearInvoker: true
+   });
 
 bot.on("ready", async () => {
     console.log(`PowerPlug is plugged in! Username: ${bot.user.username}`);
@@ -26,17 +33,12 @@ bot.on("message", async message => {
   if (message.author.bot) return;
   if(message.content.indexOf(prefix) !== 0) return;
 
-
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-   try {
-    let commandFile = require(`./cmds/${command}.js`);
-    commandFile.run(bot, message, args);
-  } catch (err) {
-    console.error(err);
-  }
-  });
 
+  let maincommands = require(`./cmds/${command}.js`);
+  maincommands.run(bot, message, args);
+});
 
 bot.login(settings.token)
