@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 exports.run = async (bot, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
-  let modlog = bot.guilds.get(message.guild.id).channels.find('name', 'log');
+  let modlog = bot.guilds.get(message.guild.id).channels.find('name', 'mod-log');
   let muteRole = bot.guilds.get(message.guild.id).roles.find('name', 'Muted');
   if (!modlog) return message.reply('I cannot find a mod-log channel').catch(console.error);
   if (!muteRole) return message.reply('I cannot find a mute role').catch(console.error);
