@@ -1,3 +1,4 @@
+const { RichEmbed } = require('discord.js')
 exports.run = async (bot, message, args) => {
     const user = message.mentions.users.first() || message.author;
     console.log(args);
@@ -5,5 +6,10 @@ exports.run = async (bot, message, args) => {
     console.log(args);
     const top = args[0].trim();
     const bottom = args[1].trim();
-    message.channel.send(`https://memegen.link/custom/${top}/${bottom}.jpg?alt=${user.displayAvatarURL}`)  
+    
+    const embed = new RichEmbed()
+        .setTitle("Fresh New Meme:")
+        .setImage(`https://memegen.link/custom/${top}/${bottom}.jpg?alt=${user.displayAvatarURL}`);
+
+    message.channel.send({embed});      
 }

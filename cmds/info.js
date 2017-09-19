@@ -7,9 +7,9 @@ exports.run = async (bot, message, args) => {
         .addField("Node.js Version", process.version)
         .addField("Guilds", bot.guilds.size)
         .addField("Prefix", settings.prefix)
-        .addField("Owner", "CircuitRCAY#6187")
+        .addField("Owners", "CircuitRCAY#6187, YumiBoat [August]#1793, CEbbinghaus#0291")
         .addField("Invite & GitHub", "Invite: https://bit.ly/PowerPlug, GitHub: https://github.com/codefromcirc/powerplugjs");
 
-     message.channel.send({embed})   
-        
+     message.channel.send({embed})
+
 }

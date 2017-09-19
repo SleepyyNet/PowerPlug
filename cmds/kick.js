@@ -1,46 +1,18 @@
 const Discord = require('discord.js');
 exports.run = async (bot, message, args) => {
-    const client = new Discord.Client();
-    if(!message.member.roles.some(r=>["Administrator", "Moderator", "Admin", "Mod", "Admins", "Mods"].includes(r.name)) ) return;
+     let reason = args.slice(1).join(' ');
+  let user = message.mentions.users.first();
+  let modlog = client.channels.find('name', 'mod-log');
+  if (!modlog) return message.reply('I cannot find a mod-log channel');
+  if (reason.length < 1) return message.reply('You must supply a reason for the ban.');
+  if (message.mentions.users.size < 1) return message.reply('You must mention someone to ban them.').catch(console.error);
 
-        if (message.mentions.users.size === 0) {
-            return message.author.send("Correct Ussage: `kick (user) (reason)`")
-        }
+  if (!message.guild.member(user).bannable) return message.reply('I cannot ban that member');
+  message.guild.member(user).kick();
 
-        let array = message.content.split(" ").slice(1);
-        let mentioned = array[0];
-        let reason = array.slice(1).join(" ")
-        let member = message.mentions.members.first();
-        const channel = message.guild.channels.find("name", "mod-log")
-        
-
-        if (!reason) {
-            const embed2 = new Discord.RichEmbed()
-                .setTimestamp()
-                .addField('Action:', 'Un/Mute')
-                .addField('User:', `${user.username}#${user.discriminator}`)
-                .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
-                .addField('Reason:', reason);
-            message.channel.send({embed2})
-            message.guild.channels.find("name", "log").send({embed})
-            member.send({embed})
-            setTimeout(function() {
-                    member.kick();
-                   
-            });
-        }
-        const embed = new Discord.RichEmbed()
-            .setTimestamp()
-            .addField('Action:', 'Un/Mute')
-            .addField('User:', `${user.username}#${user.discriminator}`)
-            .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
-            .addField('Reason:', reason);
-        message.channel.send({ embed })
-        message.guild.channels.find("name", "mod-log").send({ embed })
-        member.send({ embed })
-
-        setTimeout(function() {
-            member.kick();
-            
-        });
+  const embed = new Discord.RichEmbed()
+    .setColor(0x00AE86)
+    .setTimestamp()
+    .setDescription(`**Action:** Ban\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
+  return client.channels.get(modlog.id).send({embed});
 }
