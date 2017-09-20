@@ -1,6 +1,6 @@
 const settings = require('../settings.json')
 exports.run = async (bot, message, args) => {
-    
+
         var FeedParser = require('feedparser');
         var feedparser = new FeedParser();
         var snekfetch = require('snekfetch');
@@ -27,6 +27,6 @@ exports.run = async (bot, message, args) => {
                 }
             });
             stream.alreadyRead = true;
-        
+
     });
 }
