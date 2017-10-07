@@ -1,3 +1,4 @@
+**This branch is outdated, switch to the rewrite branch for latest changes**
 <img src="https://cdn.discordapp.com/attachments/350173567675006977/350173647081570324/Unbenannt1.png">
 
 # PowerPlugJS
