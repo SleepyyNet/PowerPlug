@@ -1,0 +1,23 @@
+{
+  "name": "powerplug",
+  "version": "1.0.0-rewrite",
+  "description": "Discord's power source!",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codefromcirc/powerplug.git"
+  },
+  "author": "CircuitRCAY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codefromcirc/powerplug/issues"
+  },
+  "homepage": "https://github.com/codefromcirc/powerplug#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "komada": "^0.21.1"
+  }
+}
