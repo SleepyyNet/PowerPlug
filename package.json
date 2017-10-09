@@ -18,6 +18,8 @@
   "homepage": "https://github.com/codefromcirc/powerplug#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "komada": "^0.21.1"
+    "enmap": "^0.4.1",
+    "komada": "^0.21.1",
+    "urban-dictionary": "^1.0.6"
   }
 }
