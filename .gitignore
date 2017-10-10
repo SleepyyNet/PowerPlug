@@ -58,13 +58,12 @@ typings/
 .env
 
 # unused bot folders
-events/
 extendables/
 finalizers/
 functions/
 inhibitors/
 monitors/
 bwd/
-
+data/
 # settings
 settings.json
